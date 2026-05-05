@@ -7,6 +7,7 @@ export type Settings = {
   maxItems: number;
   hideSettings: boolean;
   tsunamiAlwaysShow: boolean;
+  eewAlwaysShowPreliminary: boolean;
 };
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -22,6 +23,7 @@ export const DEFAULT_SETTINGS: Settings = {
   maxItems: 2,
   hideSettings: false,
   tsunamiAlwaysShow: true,
+  eewAlwaysShowPreliminary: false,
 };
 
 const STORAGE_KEY = 'nerv-obs:settings:v1';
@@ -61,6 +63,9 @@ function readFromUrl(params: URLSearchParams, base: Settings): Partial<Settings>
   if (params.has('tsunamiAlwaysShow')) {
     out.tsunamiAlwaysShow = parseBool(params.get('tsunamiAlwaysShow'), base.tsunamiAlwaysShow);
   }
+  if (params.has('eewPreliminary')) {
+    out.eewAlwaysShowPreliminary = parseBool(params.get('eewPreliminary'), base.eewAlwaysShowPreliminary);
+  }
   return out;
 }
 
@@ -76,6 +81,7 @@ function sanitizeStoredSettings(raw: unknown): Partial<Settings> | null {
   }
   // hideSettings is URL-only; ignore any stored value
   if (typeof obj.tsunamiAlwaysShow === 'boolean') out.tsunamiAlwaysShow = obj.tsunamiAlwaysShow;
+  if (typeof obj.eewAlwaysShowPreliminary === 'boolean') out.eewAlwaysShowPreliminary = obj.eewAlwaysShowPreliminary;
   if (typeof obj.categories === 'object' && obj.categories !== null) {
     const cats = obj.categories as Record<string, unknown>;
     const merged: Settings['categories'] = { ...DEFAULT_SETTINGS.categories };
@@ -137,6 +143,7 @@ export function buildShareUrl(settings: Settings): string | null {
   params.set('cat', enabled.join(','));
   params.set('max', String(settings.maxItems));
   params.set('tsunamiAlwaysShow', settings.tsunamiAlwaysShow ? '1' : '0');
+  params.set('eewPreliminary', settings.eewAlwaysShowPreliminary ? '1' : '0');
   const base = `${window.location.origin}${window.location.pathname}`;
   return `${base}?${params.toString()}&kokokesu`;
 }

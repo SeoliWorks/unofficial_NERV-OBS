@@ -111,6 +111,15 @@ export function SettingsPanel({ settings, onChange, connectionLabel }: Props): J
           <label className="settings__check">
             <input
               type="checkbox"
+              checked={settings.eewAlwaysShowPreliminary}
+              onChange={(e) => onChange({ ...settings, eewAlwaysShowPreliminary: e.target.checked })}
+            />
+            <span>予報段階の緊急地震速報を常に表示（カテゴリ・震度フィルタを無視）</span>
+          </label>
+
+          <label className="settings__check">
+            <input
+              type="checkbox"
               checked={settings.hideSettings}
               onChange={(e) => onChange({ ...settings, hideSettings: e.target.checked })}
             />
