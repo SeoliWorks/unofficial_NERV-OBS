@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+scripts/_parser_smoke.ts
+*.local
+.vite
+.DS_Store
+
+CLAUDE.md
