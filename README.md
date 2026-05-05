@@ -1,7 +1,5 @@
 <img width="592" height="474" alt="unofficial" src="https://github.com/user-attachments/assets/2c3f1095-c34b-4bc1-8f0a-c13220c8d05c" />
 
-## ページは[こちらから](https://seoliworks.github.io/unofficial_NERV-OBS/)
-
 # 非公式 NERV-OBS ウィジェット
 
 NERVの防災情報を、OBSの配信画面にリアルタイム表示するブラウザウィジェットです。配信中に地震が発生した場合、配信者が読み上げる原稿として機能します。
