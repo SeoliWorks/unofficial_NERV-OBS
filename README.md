@@ -1,4 +1,6 @@
-<img width="824" height="476" alt="unofficial" src="https://github.com/user-attachments/assets/5d06dabe-d038-4f46-9577-b2c8e94e9a3e" />
+<img width="592" height="474" alt="unofficial" src="https://github.com/user-attachments/assets/2c3f1095-c34b-4bc1-8f0a-c13220c8d05c" />
+
+## ページは[こちらから](https://seoliworks.github.io/unofficial_NERV-OBS/)
 
 # 非公式 NERV-OBS ウィジェット
 
