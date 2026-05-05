@@ -1,3 +1,5 @@
+<img width="824" height="476" alt="unofficial" src="https://github.com/user-attachments/assets/5d06dabe-d038-4f46-9577-b2c8e94e9a3e" />
+
 # 非公式 NERV-OBS ウィジェット
 
 NERVの防災情報を、OBSの配信画面にリアルタイム表示するブラウザウィジェットです。
