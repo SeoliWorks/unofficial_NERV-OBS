@@ -9,6 +9,7 @@ import { loadSettings, saveSettings, type Settings } from './store/settings';
 
 const NERV_INSTANCE_DEFAULT = 'https://unnerv.jp';
 const NERV_ACCOUNT_DEFAULT = 'UN_NERV';
+const ALLOWED_INSTANCES = new Set([NERV_INSTANCE_DEFAULT]);
 
 const STATUS_LABEL: Record<ClientStatus, string> = {
   connecting: '接続中…',
@@ -18,9 +19,10 @@ const STATUS_LABEL: Record<ClientStatus, string> = {
 };
 
 export function App(): JSX.Element {
-  const [nervInstance] = useState(
-    () => (new URLSearchParams(window.location.search).get('instance') ?? NERV_INSTANCE_DEFAULT).replace(/\/$/, '')
-  );
+  const [nervInstance] = useState(() => {
+    const raw = (new URLSearchParams(window.location.search).get('instance') ?? NERV_INSTANCE_DEFAULT).replace(/\/$/, '');
+    return ALLOWED_INSTANCES.has(raw) ? raw : NERV_INSTANCE_DEFAULT;
+  });
   const [nervAccount] = useState(
     () => new URLSearchParams(window.location.search).get('account') ?? NERV_ACCOUNT_DEFAULT
   );

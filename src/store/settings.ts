@@ -139,11 +139,11 @@ export function buildShareUrl(settings: Settings): string | null {
   const account = current.get('account');
   if (account) params.set('account', account);
   params.set('min', settings.minIntensity);
-  const enabled = ALL_CATEGORIES.filter((c) => settings.categories[c]);
-  params.set('cat', enabled.join(','));
   params.set('max', String(settings.maxItems));
   params.set('tsunamiAlwaysShow', settings.tsunamiAlwaysShow ? '1' : '0');
   params.set('eewPreliminary', settings.eewAlwaysShowPreliminary ? '1' : '0');
+  const enabled = ALL_CATEGORIES.filter((c) => settings.categories[c]);
+  const cat = enabled.join(',');
   const base = `${window.location.origin}${window.location.pathname}`;
-  return `${base}?${params.toString()}&kokokesu`;
+  return `${base}?${params.toString()}&cat=${cat}&kokokesu`;
 }

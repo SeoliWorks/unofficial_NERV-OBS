@@ -3,6 +3,7 @@ dist
 dist-ssr
 scripts/_parser_smoke.ts
 *.local
+*.tsbuildinfo
 .vite
 .DS_Store
 

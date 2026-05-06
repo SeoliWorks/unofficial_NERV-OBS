@@ -1,1 +1,0 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/components/ErrorBoundary.tsx","./src/components/PostItem.tsx","./src/components/SettingsPanel.tsx","./src/components/WidgetList.tsx","./src/nerv/client.ts","./src/nerv/parser.ts","./src/nerv/types.ts","./src/store/filter.ts","./src/store/settings.ts","./vite.config.ts"],"version":"5.9.3"}
