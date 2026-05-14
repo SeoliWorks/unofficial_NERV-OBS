@@ -113,7 +113,7 @@ GitHub Pages 版ではなく、ローカルファイルや自前のサーバー�
 ### 1. リポジトリのクローン
 
 ```
-git clone https://github.com/SeoliWorks/unofficial_NERV-OBS.git
+git clone https://github.com/blueshrimp-dev/NERV-OBS_unofficial.git
 cd unofficial_NERV-OBS
 ```
 
