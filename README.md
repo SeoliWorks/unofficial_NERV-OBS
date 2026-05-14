@@ -33,7 +33,7 @@ NERVの防災情報を、OBSの配信画面にリアルタイム表示するブ�
 3. URLに以下を入力
 
 ```
-https://seoliworks.github.io/unofficial_NERV-OBS/
+https://blueshrimp-dev.github.io/unofficial_NERV-OBS/
 ```
 
 4. 幅・高さをお好みに合わせて設定（例：幅 400px、高さ 800px）
@@ -90,7 +90,7 @@ OBSのブラウザソースのURLに以下のパラメーターを追加する�
 
 **例：** 地震・津波のみ、震度4以上、本番モード
 ```
-https://seoliworks.github.io/unofficial_NERV-OBS/?min=4&cat=earthquake,tsunami&kokokesu
+https://blueshrimp-dev.github.io/unofficial_NERV-OBS/?min=4&cat=earthquake,tsunami&kokokesu
 ```
 
 ---
